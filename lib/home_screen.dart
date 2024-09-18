@@ -9,8 +9,33 @@ class HomeScreen extends StatelessWidget {
     return   Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
-        title: Text('First Screen'),
+        title: Text('This is First Screen'),
       ),
+drawer: Drawer(
+  child: ListView(
+    children: [
+
+      UserAccountsDrawerHeader(
+          decoration: BoxDecoration(
+            color: Colors.lightBlue,
+          ),
+          accountName: Text('Hamad'), accountEmail: Text('hamadmanzoor968@gmail.com'),
+        // currentAccountPicture: CircleAvatar(
+        //   backgroundImage: AssetImage(''),
+        // ),
+
+
+      ),
+    ListTile(
+      leading: Icon(Icons.home),
+      title:Text("Page 1"),
+
+    )
+    ],
+  ),
+
+
+),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
